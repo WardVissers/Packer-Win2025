@@ -177,11 +177,6 @@ build {
     inline = ["ipconfig"]
   }
 
-  provisioner "file" {
-  source = "./setup/basic/"
-  destination = "C:\\Temp"
- }
-
   provisioner "windows-update" {
     filters = [
       "exclude:$_.Title -like '*VMware*'",
